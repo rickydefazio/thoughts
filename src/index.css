@@ -23,7 +23,7 @@ body {
 #root {
   background-color: white;
   width: 80%;
-  height: 60dvh;
+  height: 75dvh;
   overflow-y: scroll;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
@@ -31,7 +31,7 @@ body {
 
 header {
   text-align: center;
-  margin: 20px;
+  margin: 30px;
 }
 
 input {
