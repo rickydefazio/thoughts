@@ -36,7 +36,10 @@ header {
 
 input {
   font: inherit;
-  box-sizing: border-box;
+  appearance: none;
+  --webkit-appearance: none;
+  --moz-appearance: none;
+  border: 1px solid black;
 }
 
 input[type='submit'] {
@@ -124,6 +127,10 @@ input[type='submit'] {
   .app h1:after {
     content: unset;
     margin-left: unset;
+  }
+
+  .thought-form input[type='text'] {
+    font-size: 1rem;
   }
 
   .thought-form input[type='submit'] {
