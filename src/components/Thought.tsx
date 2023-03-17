@@ -31,7 +31,9 @@ export default function Thought({ thought, removeThought }: ThoughtProps) {
       >
         &times;
       </button>
-      <div className='text'>{thought.text}</div>
+      <div className='text'>
+        {thought.text} {thought.emoji}
+      </div>
     </li>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { generateId, getNewExpirationTime } from '../utilities';
+import { generateId, getNewExpirationTime, getRandomEmoji } from '../utilities';
 import { IThought } from '../types';
 
 interface ThoughtFormProps {
@@ -21,6 +21,7 @@ export default function ThoughtForm(props: ThoughtFormProps) {
         id: generateId(),
         text: text,
         expiresAt: getNewExpirationTime(),
+        emoji: getRandomEmoji(),
       };
 
       props.addThought(newThought);
@@ -32,7 +33,7 @@ export default function ThoughtForm(props: ThoughtFormProps) {
   return (
     <form onSubmit={handleSubmit} className='thought-form'>
       <input
-        value={text}
+        value={`${text}`}
         onChange={handleTextChange}
         type='text'
         aria-label="What's on your mind?"
