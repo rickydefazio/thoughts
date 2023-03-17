@@ -12,8 +12,9 @@ export default function App() {
     setThoughts([
       {
         id: generateId(),
-        text: 'Time for venting! 🤯',
+        text: 'Time for venting!',
         expiresAt: getNewExpirationTime(),
+        emoji: '🤯🤯🤯',
       },
     ]);
   }, []);
