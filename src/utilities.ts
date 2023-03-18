@@ -14,3 +14,14 @@ export function getRandomEmoji() {
   const randomIndex = Math.floor(Math.random() * emojis.length);
   return emojis[randomIndex].repeat(amountRepeated);
 }
+
+export function getInitialThoughts() {
+  return [
+    {
+      id: generateId(),
+      text: 'Time for venting!',
+      expiresAt: getNewExpirationTime(),
+      emoji: '🤯🤯🤯',
+    },
+  ];
+}

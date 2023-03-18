@@ -1,31 +1,31 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import ThoughtForm from './components/ThoughtForm';
 import Thought from './components/Thought';
-import { generateId, getNewExpirationTime } from './utilities';
-
+import { getInitialThoughts } from './utilities';
 import { IThought } from './types';
+
+const initialThoughts = getInitialThoughts();
 
 export default function App() {
   const [thoughts, setThoughts] = useState<IThought[]>([]);
 
   useEffect(() => {
-    setThoughts([
-      {
-        id: generateId(),
-        text: 'Time for venting!',
-        expiresAt: getNewExpirationTime(),
-        emoji: '🤯🤯🤯',
-      },
-    ]);
+    setThoughts(initialThoughts);
   }, []);
 
-  const addThought = (thought: IThought) => {
-    setThoughts([thought, ...thoughts]);
-  };
+  const addThought = useCallback(
+    (thought: IThought) => {
+      setThoughts([thought, ...thoughts]);
+    },
+    [setThoughts, thoughts]
+  );
 
-  const removeThought = (thoughtIdToRemove: number) => {
-    setThoughts(thoughts.filter(thought => thought.id !== thoughtIdToRemove));
-  };
+  const removeThought = useCallback(
+    (thoughtIdToRemove: number) => {
+      setThoughts(thoughts.filter(thought => thought.id !== thoughtIdToRemove));
+    },
+    [setThoughts, thoughts]
+  );
 
   return (
     <div className='app'>

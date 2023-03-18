@@ -39,7 +39,7 @@ export default function ThoughtForm(props: ThoughtFormProps) {
         aria-label="What's on your mind?"
         placeholder="What's on your mind?"
       />
-      <input type='submit' value='Add' className='submit-animation ' />
+      <input type='submit' value='Send' className='submit-animation ' />
     </form>
   );
 }
