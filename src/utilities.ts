@@ -6,7 +6,6 @@ export function getNewExpirationTime() {
 
 let nextId = 0;
 export function generateId() {
-  console.log('nextId', nextId);
   return nextId++;
 }
 

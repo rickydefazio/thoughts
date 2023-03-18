@@ -6,10 +6,8 @@
 }
 
 body {
-  font-size: 16pt;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100dvh;
@@ -29,46 +27,46 @@ body {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
-header {
-  text-align: center;
-  margin: 30px;
-}
-
-input {
-  font: inherit;
-  appearance: none;
-  --webkit-appearance: none;
-  --moz-appearance: none;
-  border: 1px solid black;
-}
-
-input[type='submit'] {
-  cursor: pointer;
-}
-
 .app {
   margin: 0 auto;
   max-width: 600px;
   width: 95%;
 }
 
-.app h1:after {
-  content: '💭';
-  margin-left: 0.5em;
+header {
+  text-align: center;
+  margin: 30px 0px;
+}
+
+.app h1 {
+  font-size: 1.5rem;
+  width: 100%;
 }
 
 .thought-form {
   display: flex;
   flex-wrap: nowrap;
+  flex-direction: column;
 }
 
 .thought-form input {
+  font: inherit;
+  appearance: none;
+  --webkit-appearance: none;
+  --moz-appearance: none;
   padding: 1.5rem;
   border: 1px solid #666;
-  border-radius: 3px;
+}
+
+.thought-form input[type='submit'] {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-top: none;
 }
 
 .thought-form input[type='text'] {
+  font-size: 1rem;
+  border-right: 1px solid #666;
   flex-grow: 1;
 }
 
@@ -90,7 +88,8 @@ input[type='submit'] {
 }
 
 .thought .remove-button {
-  font-size: 80%;
+  font-size: inherit;
+  width: 1rem;
   float: right;
   border: 0;
   border-radius: 3px;
@@ -104,42 +103,39 @@ input[type='submit'] {
 
 /* Media Queries */
 
-@media screen and (max-width: 610px) {
+@media screen and (min-width: 450px) {
+  .app h1:after {
+    content: '💭';
+    margin-left: 0.5rem;
+  }
+
   .app h1 {
     font-size: 2rem;
   }
-
-  .thought {
-    font-size: 1.25rem;
-  }
-
-  .thought-form input[type='text'] {
-    height: fit-content;
-  }
 }
 
-@media screen and (max-width: 510px) {
-  .thought-form {
-    display: flex;
-    flex-direction: column;
+@media screen and (min-width: 625px) {
+  .app h1 {
+    font-size: 3rem;
   }
 
-  .app h1:after {
-    content: unset;
-    margin-left: unset;
+  .thought-form {
+    flex-direction: row;
   }
 
   .thought-form input[type='text'] {
-    font-size: 1rem;
+    border-right: none;
+    font-size: 1.333rem;
   }
 
   .thought-form input[type='submit'] {
-    height: 2rem;
-    padding: unset;
+    border-top: 1px solid #666;
+    padding: 1.5rem;
+    font-size: 1.333rem;
   }
 
-  .thought {
-    font-size: 1rem;
+  ul {
+    font-size: 1.333rem;
   }
 }
 
