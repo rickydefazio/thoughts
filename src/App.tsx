@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import ThoughtForm from './components/ThoughtForm';
 import Thought from './components/Thought';
-import { getInitialThoughts } from './utilities';
+import { getInitialThoughts } from './utils/utilities';
 import { IThought } from './types';
 
 const initialThoughts = getInitialThoughts();

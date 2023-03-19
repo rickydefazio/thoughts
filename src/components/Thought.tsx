@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { IThought } from '../types';
-import { writeText } from '../utilities';
+import { writeText } from '../utils/utilities';
 
 interface ThoughtProps {
   thought: IThought;

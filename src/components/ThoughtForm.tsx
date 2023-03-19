@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
-import { generateId, getNewExpirationTime, getRandomEmoji } from '../utilities';
+import {
+  generateId,
+  getNewExpirationTime,
+  getRandomEmoji,
+} from '../utils/utilities';
 import { IThought } from '../types';
 
 interface ThoughtFormProps {

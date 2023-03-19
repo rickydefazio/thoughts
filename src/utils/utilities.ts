@@ -11,9 +11,8 @@ export function generateId() {
 }
 
 export function getRandomEmoji() {
-  const amountRepeated = Math.floor(Math.random() * 3) + 1; // min 1, max 3
   const randomIndex = Math.floor(Math.random() * emojis.length);
-  return emojis[randomIndex].repeat(amountRepeated);
+  return emojis[randomIndex];
 }
 
 export function getInitialThoughts() {

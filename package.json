@@ -1,9 +1,9 @@
 {
-  "name": "passing-thoughts",
+  "name": "thoughts",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://rickydefazio.github.io/passing-thoughts",
+  "homepage": "https://rickydefazio.github.io/thoughts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
