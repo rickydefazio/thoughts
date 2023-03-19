@@ -20,9 +20,33 @@ export function getInitialThoughts() {
   return [
     {
       id: generateId(),
-      text: 'Time for venting!',
+      text: 'I am grateful for...',
       expiresAt: getNewExpirationTime(),
-      emoji: '🤯🤯🤯',
+      emoji: '🙏',
+    },
+    {
+      id: generateId(),
+      text: 'I am proud of...',
+      expiresAt: getNewExpirationTime(),
+      emoji: '💪',
+    },
+    {
+      id: generateId(),
+      text: 'I wish I could...',
+      expiresAt: getNewExpirationTime(),
+      emoji: '🚀',
+    },
+    {
+      id: generateId(),
+      text: 'I hate when...',
+      expiresAt: getNewExpirationTime(),
+      emoji: '😡',
+    },
+    {
+      id: generateId(),
+      text: "I can't believe...",
+      expiresAt: getNewExpirationTime(),
+      emoji: '🤯',
     },
   ];
 }
