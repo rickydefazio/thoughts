@@ -30,7 +30,7 @@ export default function App() {
   return (
     <div className='app'>
       <header>
-        <h1>Passing Thoughts</h1>
+        <h1>Thoughts</h1>
       </header>
       <main>
         <ThoughtForm addThought={addThought} />
