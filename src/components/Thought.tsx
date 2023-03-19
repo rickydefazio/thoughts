@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { IThought } from '../types';
+import { writeText } from '../utilities';
 
 interface ThoughtProps {
   thought: IThought;
@@ -7,18 +8,38 @@ interface ThoughtProps {
 }
 
 export default function Thought({ thought, removeThought }: ThoughtProps) {
+  const indexRef = useRef(0);
+  const [generatedText, setGeneratedText] = useState('');
+
   useEffect(() => {
-    const timeRemaining = thought.expiresAt - Date.now();
-    const timeout = setTimeout(() => {
-      removeThought(thought.id);
-    }, timeRemaining);
+    let intervalId: number;
+    if (indexRef.current < thought.text.length) {
+      intervalId = setInterval(
+        () => writeText(thought.text, setGeneratedText, indexRef),
+        100
+      );
+    }
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  useEffect(() => {
+    let timeoutId: number;
+
+    if (indexRef.current >= thought.text.length) {
+      const timeRemaining = thought.expiresAt - Date.now();
+
+      timeoutId = setTimeout(() => {
+        removeThought(thought.id);
+      }, timeRemaining);
+    }
 
     return () => {
-      clearTimeout(timeout);
+      clearTimeout(timeoutId);
     };
-  }, [thought, removeThought]);
+  }, [thought, removeThought, generatedText]);
 
-  const handleRemoveClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleRemoveClick = () => {
     removeThought(thought.id);
   };
 
@@ -32,7 +53,7 @@ export default function Thought({ thought, removeThought }: ThoughtProps) {
         &times;
       </button>
       <div className='text'>
-        {thought.text} {thought.emoji}
+        {generatedText} {thought.emoji}
       </div>
     </li>
   );

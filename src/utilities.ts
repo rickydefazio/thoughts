@@ -1,3 +1,4 @@
+import { MutableRefObject } from 'react';
 import { emojis } from './emojis';
 
 export function getNewExpirationTime() {
@@ -24,4 +25,13 @@ export function getInitialThoughts() {
       emoji: '🤯🤯🤯',
     },
   ];
+}
+
+export function writeText(
+  text: string,
+  setGeneratedText: (text: string) => void,
+  indexRef: MutableRefObject<number>
+) {
+  setGeneratedText(text.slice(0, indexRef.current));
+  indexRef.current += 1;
 }
