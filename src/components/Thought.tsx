@@ -27,11 +27,11 @@ export default function Thought({ thought, removeThought }: ThoughtProps) {
     let timeoutId: number;
 
     if (indexRef.current >= thought.text.length) {
-      const timeRemaining = thought.expiresAt - Date.now();
+      const duration = 5 * 1000;
 
       timeoutId = setTimeout(() => {
         removeThought(thought.id);
-      }, timeRemaining);
+      }, duration);
     }
 
     return () => {

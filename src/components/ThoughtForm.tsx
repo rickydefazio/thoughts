@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
-import {
-  generateId,
-  getNewExpirationTime,
-  getRandomEmoji,
-} from '../utils/utilities';
+import { generateId, getRandomEmoji } from '../utils/utilities';
 import { IThought } from '../types';
 
 interface ThoughtFormProps {
@@ -24,7 +20,6 @@ export default function ThoughtForm(props: ThoughtFormProps) {
       const newThought = {
         id: generateId(),
         text: text,
-        expiresAt: getNewExpirationTime(),
         emoji: getRandomEmoji(),
       };
 
