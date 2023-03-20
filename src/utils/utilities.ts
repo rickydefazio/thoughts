@@ -25,11 +25,6 @@ export function getInitialThoughts() {
     },
     {
       id: generateId(),
-      text: 'I wish I could...',
-      emoji: '🚀',
-    },
-    {
-      id: generateId(),
       text: 'I hate when...',
       emoji: '😡',
     },

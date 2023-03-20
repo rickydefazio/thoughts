@@ -1,157 +1,35 @@
-/* CSS RESET */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --main-font: 'Rajdhani', sans-serif;
+}
+body {
+  font-family: var(--main-font);
 }
 
-body {
-  font-size: 1rem;
-  font-family: 'Rajdhani', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  min-height: 100dvh;
-  background: linear-gradient(lightblue 49%, lightgrey 51%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+h1:after {
+  content: '💭';
 }
 
 #root {
-  background-color: white;
-  width: 80%;
+  @apply bg-white w-4/5 mx-auto my-10 rounded-lg shadow-2xl;
   height: 75dvh;
-  overflow-y: scroll;
-  border-radius: 10px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
-.app {
-  margin: 0 auto;
-  max-width: 600px;
-  width: 95%;
-}
-
-header {
-  text-align: center;
-  margin: 30px 0px;
-}
-
-.app h1 {
-  font-size: 1.5rem;
-  width: 100%;
-}
-
-.thought-form {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-}
-
-.thought-form input {
-  font: inherit;
-  appearance: none;
-  --webkit-appearance: none;
-  --moz-appearance: none;
-  padding: 1.5rem;
-  border: 1px solid #666;
+.thought-form input,
+.thought-form input[type='text'] {
+  border: 1px solid rgb(120 113 108);
 }
 
 .thought-form input[type='submit'] {
-  cursor: pointer;
-  padding: 0.5rem;
   border-top: none;
-  background-color: lightblue;
 }
 
-.thought-form input[type='text'] {
-  font-size: 1rem;
-  border-right: 1px solid #666;
-  flex-grow: 1;
-}
-
-.thought-form input[type='text']:focus {
-  outline: none;
-}
-
-.thoughts {
-  list-style-type: none;
-  padding: 0;
-  margin-top: 5px;
-}
-
-.thought {
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 3px;
-  background-color: #eee;
-}
-
-.thought .remove-button {
-  font-size: inherit;
-  width: 1.5rem;
-  border: 0;
-  border-radius: 3px;
-  background: transparent;
-  cursor: pointer;
-}
-
-.thought {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row-reverse;
-}
-
-.thought .remove-button:hover {
-  color: #fff;
-  background-color: #000;
-}
-
-/* Media Queries */
-
-@media screen and (min-width: 450px) {
-  .app h1:after {
-    content: '💭';
-    margin-left: 0.5rem;
-  }
-
-  .app h1 {
-    font-size: 2rem;
-  }
-}
-
-@media screen and (min-width: 625px) {
-  .app h1 {
-    font-size: 3rem;
-  }
-
-  .thought-form {
-    flex-direction: row;
-  }
-
-  .thought-form input[type='text'] {
-    border-right: none;
-    font-size: 1.333rem;
-  }
-
+@media screen and (min-width: 640px) {
   .thought-form input[type='submit'] {
-    border-top: 1px solid #666;
-    padding: 1.5rem;
-    font-size: 1.333rem;
+    border-top: 1px solid rgb(120 113 108);
+    border-left: none;
   }
-
-  ul {
-    font-size: 1.333rem;
-  }
-}
-
-/* Animations */
-
-.submit-animation {
-  transition: opacity 0.3s ease-in-out;
-}
-
-.submit-animation:active {
-  transform: translateY(2px);
 }

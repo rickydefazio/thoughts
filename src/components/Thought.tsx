@@ -12,7 +12,7 @@ export default function Thought({ thought, removeThought }: ThoughtProps) {
   const [generatedText, setGeneratedText] = useState('');
 
   useEffect(() => {
-    let intervalId: number;
+    let intervalId: NodeJS.Timer;
     if (indexRef.current < thought.text.length) {
       intervalId = setInterval(
         () => writeText(thought.text, setGeneratedText, indexRef),
@@ -24,7 +24,7 @@ export default function Thought({ thought, removeThought }: ThoughtProps) {
   }, []);
 
   useEffect(() => {
-    let timeoutId: number;
+    let timeoutId: NodeJS.Timeout;
 
     if (indexRef.current >= thought.text.length) {
       const duration = 5 * 1000;
@@ -44,10 +44,10 @@ export default function Thought({ thought, removeThought }: ThoughtProps) {
   };
 
   return (
-    <li className='thought'>
+    <li className='thought flex justify-between flex-row-reverse p-4 mb-4 rounded-sm bg-stone-100'>
       <button
         aria-label='Remove thought'
-        className='remove-button'
+        className='remove-button text-2xl leading-4 hover:text-white hover:bg-black cursor-pointer w-6 rounded-sm bg-transparent'
         onClick={handleRemoveClick}
       >
         &times;

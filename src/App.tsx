@@ -28,13 +28,13 @@ export default function App() {
   );
 
   return (
-    <div className='app'>
-      <header>
-        <h1>Thoughts</h1>
+    <div className='app max-w-screen-sm mx-auto w-11/12'>
+      <header className='text-center my-8'>
+        <h1 className='w-full text-5xl ml-2'>Thoughts</h1>
       </header>
       <main>
         <ThoughtForm addThought={addThought} />
-        <ul className='thoughts'>
+        <ul className='thoughts list-none p-0 mt-1 sm:text-xl'>
           {thoughts.map(thought => (
             <Thought
               key={thought.id}
