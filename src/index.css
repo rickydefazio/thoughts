@@ -5,9 +5,10 @@
 :root {
   --main-font: 'Rajdhani', sans-serif;
 }
+html,
 body {
   font-family: var(--main-font);
-  height: 100dvh;
+  height: stretch;
 }
 
 h1:after {
