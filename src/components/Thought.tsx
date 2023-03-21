@@ -44,15 +44,15 @@ export default function Thought({ thought, removeThought }: ThoughtProps) {
   };
 
   return (
-    <li className='thought flex justify-between flex-row-reverse p-4 mb-4 rounded-sm bg-stone-100'>
+    <li className='flex justify-between flex-row-reverse p-4 mb-4 rounded-sm bg-stone-100'>
       <button
         aria-label='Remove thought'
-        className='remove-button text-2xl leading-4 hover:text-white hover:bg-black cursor-pointer w-6 rounded-sm bg-transparent'
+        className='text-2xl leading-4 hover:text-white hover:bg-black cursor-pointer w-6 rounded-sm bg-transparent'
         onClick={handleRemoveClick}
       >
         &times;
       </button>
-      <div className='text'>
+      <div>
         {generatedText} {thought.emoji}
       </div>
     </li>

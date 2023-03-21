@@ -14,7 +14,7 @@ h1:after {
 }
 
 #root {
-  @apply bg-white w-4/5 mx-auto my-10 rounded-lg shadow-2xl;
+  @apply bg-white w-4/5 mx-auto my-10 rounded-lg shadow-2xl overflow-scroll;
   height: 75dvh;
 }
 
