@@ -16,8 +16,7 @@ h1:after {
 }
 
 #root {
-  @apply bg-white w-4/5 mx-auto my-10 rounded-lg shadow-2xl overflow-hidden;
-  height: 75dvh;
+  @apply bg-white w-4/5 mx-auto my-10 rounded-lg shadow-2xl overflow-hidden h-screen;
 }
 
 .thought-form input,
