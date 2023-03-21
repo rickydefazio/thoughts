@@ -7,6 +7,7 @@
 }
 body {
   font-family: var(--main-font);
+  height: 100dvh;
 }
 
 h1:after {
