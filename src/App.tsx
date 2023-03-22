@@ -30,7 +30,7 @@ export default function App() {
   return (
     <div className='max-w-screen-sm mx-auto w-11/12'>
       <header className='text-center my-8'>
-        <h1 className='w-full text-5xl ml-2 md:text-6xl lg:text-7xl xl:text-8xl'>
+        <h1 className='w-full text-5xl ml-2 md:text-6xl lg:text-7xl xl:text-8xl animate-pulse'>
           Thoughts
         </h1>
       </header>

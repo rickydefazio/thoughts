@@ -38,6 +38,7 @@ export default function ThoughtForm(props: ThoughtFormProps) {
         value={`${text}`}
         onChange={handleTextChange}
         type='text'
+        autoFocus
         aria-label="What's on your mind?"
         placeholder="What's on your mind?"
         className='focus:outline-none	appearance-none p-6 text-base flex-grow sm:text-xl'
