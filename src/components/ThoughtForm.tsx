@@ -32,7 +32,7 @@ export default function ThoughtForm(props: ThoughtFormProps) {
   return (
     <form
       onSubmit={handleSubmit}
-      className='thought-form flex flex-no-wrap flex-col sm:flex-row'
+      className='thought-form flex-no-wrap flex flex-col sm:flex-row'
     >
       <input
         value={`${text}`}
@@ -41,12 +41,12 @@ export default function ThoughtForm(props: ThoughtFormProps) {
         autoFocus
         aria-label="What's on your mind?"
         placeholder="What's on your mind?"
-        className='focus:outline-none	appearance-none p-6 text-base flex-grow sm:text-xl'
+        className='flex-grow	appearance-none p-6 text-base focus:outline-none sm:text-xl'
       />
       <input
         type='submit'
         value='Send'
-        className='bg-stone-300 appearance-none cursor-pointer p-2 sm:px-4 text-xl hover:animate-pulse active:bg-stone-400'
+        className='cursor-pointer appearance-none bg-stone-300 p-2 text-xl hover:animate-pulse active:bg-stone-400 sm:px-4'
       />
     </form>
   );

@@ -28,15 +28,15 @@ export default function App() {
   );
 
   return (
-    <div className='max-w-screen-sm mx-auto w-11/12'>
-      <header className='text-center my-8'>
-        <h1 className='w-full text-5xl ml-2 md:text-6xl lg:text-7xl xl:text-8xl animate-pulse'>
+    <div className='mx-auto w-11/12 max-w-screen-sm'>
+      <header className='my-8 text-center'>
+        <h1 className='ml-2 w-full animate-pulse text-5xl md:text-6xl lg:text-7xl xl:text-8xl'>
           Thoughts
         </h1>
       </header>
       <main>
         <ThoughtForm addThought={addThought} />
-        <ul className='list-none p-0 mt-1 sm:text-xl'>
+        <ul className='mt-1 list-none p-0 sm:text-xl'>
           {thoughts.map(thought => (
             <Thought
               key={thought.id}

@@ -44,10 +44,10 @@ export default function Thought({ thought, removeThought }: ThoughtProps) {
   };
 
   return (
-    <li className='flex justify-between flex-row-reverse p-4 mb-4 rounded-sm bg-stone-100'>
+    <li className='mb-4 flex flex-row-reverse justify-between rounded-sm bg-stone-100 p-4'>
       <button
         aria-label='Remove thought'
-        className='text-2xl leading-4 hover:text-white hover:bg-black cursor-pointer w-6 rounded-sm bg-transparent'
+        className='w-6 cursor-pointer rounded-sm bg-transparent text-2xl leading-4 hover:bg-black hover:text-white'
         onClick={handleRemoveClick}
       >
         &times;
