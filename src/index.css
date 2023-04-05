@@ -9,6 +9,7 @@ html,
 body {
   font-family: var(--main-font);
   height: stretch;
+  min-height: 100vh;
 }
 
 h1:after {
@@ -16,7 +17,7 @@ h1:after {
 }
 
 #root {
-  @apply bg-white w-4/5 mx-auto my-10 rounded-lg shadow-2xl overflow-hidden h-screen;
+  @apply mx-auto my-10 h-screen w-4/5 overflow-hidden rounded-lg bg-white shadow-2xl;
 }
 
 .thought-form input,
