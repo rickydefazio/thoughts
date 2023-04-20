@@ -20,7 +20,7 @@ body {
 }
 
 #root {
-  @apply mx-auto my-10 h-screen w-4/5 overflow-hidden rounded-lg bg-white shadow-2xl;
+  @apply mx-auto my-10 h-4/5 w-4/5 overflow-hidden rounded-lg bg-white shadow-2xl;
 }
 
 h1:after {
