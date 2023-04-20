@@ -10,6 +10,12 @@ body {
   font-family: var(--main-font);
   height: stretch;
   min-height: 100vh;
+  @apply bg-gradient-to-b
+  from-sky-200 to-stone-500;
+}
+
+body {
+  @apply flex flex-col items-center justify-center text-base;
 }
 
 h1:after {

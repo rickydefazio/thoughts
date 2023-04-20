@@ -46,7 +46,7 @@ export default function ThoughtForm(props: ThoughtFormProps) {
       <input
         type='submit'
         value='Send'
-        className='cursor-pointer appearance-none bg-stone-300 p-2 text-xl hover:animate-pulse active:bg-stone-400 sm:px-4'
+        className='cursor-pointer appearance-none bg-stone-300 p-2 text-xl active:bg-stone-400 sm:px-4'
       />
     </form>
   );
