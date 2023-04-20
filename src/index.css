@@ -8,22 +8,25 @@
 html,
 body {
   font-family: var(--main-font);
-  height: stretch;
-  min-height: 100vh;
   @apply bg-gradient-to-b
   from-sky-200 to-stone-500;
+
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
 }
 
 body {
   @apply flex flex-col items-center justify-center text-base;
 }
 
-h1:after {
-  content: '💭';
-}
-
 #root {
   @apply mx-auto my-10 h-screen w-4/5 overflow-hidden rounded-lg bg-white shadow-2xl;
+}
+
+h1:after {
+  content: '💭';
 }
 
 .thought-form input,
